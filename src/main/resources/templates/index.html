@@ -9,22 +9,24 @@
 <body>
     
 
-    <div class="container">
-        <div class="tab">Cálculos varios</div>
-        <form class="formulario">
-            <input type="number" name="numero" id="numero" placeholder="Ingrese un numero" >
-            <select name="calculos" id="calculos">
-                <option value="primo">Es primo</option>
-                <option value="par">Es par</option>
-                <option value="factorial">Factorial</option>
-                <option value="suma_par">Suma pares</option>
-                <option value="suma_inpar">Suma inpares</option>
-            </select>
+   <div class="container"> 
+    <div class="tab">Cálculos varios</div>
+    <form class="formulario">
+        <input type="number" name="numero" id="numero" placeholder="Ingrese un número">
+        
+        <select name="calculos" id="calculos" onchange="cambiarTextoBoton()">
+            <option value="primo">Es primo</option>
+            <option value="par">Es par</option>
+            <option value="factorial">Factorial</option>
+            <option value="suma_par">Suma pares</option>
+            <option value="suma_impar">Suma impares</option>
+        </select>
+        
             <div class="resultado" id="resultado">Resultado:</div>
-            <button type="submit">Verificar</button>
+            <button type="button" onclick="realizarCalculo()" id="boton">Verificar</button>
         </form>
     </div>
 
-    <script src="assets/js/varioscalculos.js"></script>
+<script src="assets/js/varioscalculos.js"></script>
 </body>
 </html>
